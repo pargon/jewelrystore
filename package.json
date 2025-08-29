@@ -2,7 +2,10 @@
   "name": "diamondjewelry",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://pargon.github.io/jewelrystore",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -13,7 +16,6 @@
     "build:safe": "node scripts/safe-build.js",
     "build:full": "npm run lint:fix && npm run build",
     "check": "npm run lint && echo ✅ Linting passed!",
-    "deploy": "npm run lint && npm run build && echo ✅ Ready for deployment!",
     "prepare": "npm run lint && npm run build",
     "dev": "node scripts/dev-tools.js",
     "quick-check": "node scripts/dev-tools.js 1",
