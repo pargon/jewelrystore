@@ -1,14 +1,3 @@
-import { SocialLinks } from "../types/common";
-
-// Tipos específicos para la página de inicio
-interface ContactInfo {
-  address: string;
-  phone: string;
-  whatsapp: string;
-  email: string;
-  hours: string;
-}
-
 export const HOME_DATA = {
   hero: {
     title: "Diamond Jewelry",
@@ -52,26 +41,26 @@ export const HOME_DATA = {
     title: "Marcas de confianza",
     subtitle: "Trabajamos con las mejores marcas del mundo",
     names: [
-  "Paddle Watch",
-  "Tommy Hilfiger",
-  "Tressa",
-  "DKNY",
-  "Swatch",
-  "Garmin",
-  "Adidas",
-  "Casio",
-  "SMART PADDLE",
-  "John L. Cook",
-  "Swarovski",
-  "Puma",
-  "Citizen",
-  "Festina",
-  "Seiko",
-  "Tissot",
-  "Invicta",
-  "Orient",
-  "Reebok",
-  "Cat"
+      "Paddle Watch",
+      "Tommy Hilfiger",
+      "Tressa",
+      "DKNY",
+      "Swatch",
+      "Garmin",
+      "Adidas",
+      "Casio",
+      "SMART PADDLE",
+      "John L. Cook",
+      "Swarovski",
+      "Puma",
+      "Citizen",
+      "Festina",
+      "Seiko",
+      "Tissot",
+      "Invicta",
+      "Orient",
+      "Reebok",
+      "Cat",
     ],
   },
 };
