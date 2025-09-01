@@ -4,16 +4,19 @@
  */
 
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import { HomeHero, HomeCategories, HomeBrands, HomeComoComprar } from "../components/home";
 import { Footer, BackToTop } from "../components/shared";
-import { HOME_DATA, HOME_ACTIONS } from "../data/home";
+import { HOME_DATA } from "../data/home";
 import { footerContactInfo, footerSocialLinks } from "../data/footerData";
 
 const ModernHome: React.FC = () => {
 
-  // Handlers usando las acciones centralizadas
+  // Router navigation (usar la navegación del cliente para mantener SPA)
+  const navigate = useNavigate();
   const handleCategoryClick = (link: string) => {
-    HOME_ACTIONS.navigateToCategory(link);
+    // useNavigate acepta rutas relativas/absolutas definidas en AppRouter
+    navigate(link);
   };
 
   // Handler para scroll a categorías en el mismo home
@@ -95,7 +98,7 @@ const ModernHome: React.FC = () => {
       />
       
       {/* Botón flotante para volver al inicio */}
-      <BackToTop/>
+      <BackToTop position="fixed" />
     </>
   );
 };

@@ -3,7 +3,7 @@
  * Botón flotante para regresar al inicio de la página
  */
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface BackToTopProps {
   className?: string;
@@ -15,29 +15,15 @@ const BackToTop: React.FC<BackToTopProps> = ({
   position = 'static' 
 }) => {
   const [visible, setVisible] = useState(false);
-  const [footerVisible, setFooterVisible] = useState(false);
-  const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setVisible(window.scrollY > 100);
+      // Mostrar el botón cuando haya scroll de más de 300px (antes era 100px)
+      setVisible(window.scrollY > 300);
     };
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // inicializa el estado
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const footer = document.querySelector('footer');
-    if (!footer) return;
-    observerRef.current = new window.IntersectionObserver(
-      ([entry]) => setFooterVisible(entry.isIntersecting),
-      { threshold: 0.1 }
-    );
-    observerRef.current.observe(footer);
-    return () => {
-      if (observerRef.current) observerRef.current.disconnect();
-    };
   }, []);
 
   const handleScrollToTop = () => {
@@ -47,7 +33,8 @@ const BackToTop: React.FC<BackToTopProps> = ({
     });
   };
 
-  if (!visible || footerVisible) return null;
+  // Solo mostrar el botón si hay suficiente scroll, sin importar si el footer es visible
+  if (!visible) return null;
 
   return (
     <button
