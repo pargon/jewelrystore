@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/jewelrystore/static/css/main.4c6ef27a.css",
-    "main.js": "/jewelrystore/static/js/main.6156d98f.js",
+    "main.css": "/jewelrystore/static/css/main.3f47b23f.css",
+    "main.js": "/jewelrystore/static/js/main.3e9d1bb1.js",
     "index.html": "/jewelrystore/index.html",
-    "main.4c6ef27a.css.map": "/jewelrystore/static/css/main.4c6ef27a.css.map",
-    "main.6156d98f.js.map": "/jewelrystore/static/js/main.6156d98f.js.map"
+    "main.3f47b23f.css.map": "/jewelrystore/static/css/main.3f47b23f.css.map",
+    "main.3e9d1bb1.js.map": "/jewelrystore/static/js/main.3e9d1bb1.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c6ef27a.css",
-    "static/js/main.6156d98f.js"
+    "static/css/main.3f47b23f.css",
+    "static/js/main.3e9d1bb1.js"
   ]
 }
